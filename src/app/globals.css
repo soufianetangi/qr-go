@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *{
+  border: 2px solid red;
+} */
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1D242C;
+  box-shadow: 1px 1px 5px #FDFDFD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #014F82;
+}
+
+.bg-background {
+    background-image: url('/img/bg-img.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+  
+.input{
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 2px solid rgba(2, 2, 2, 0.3);
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.input:focus{
+  border: 2px solid #014F82;
+  transition: 1s;
+}
+
+.profile-input{
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  color: black;
+  background-color: #dde2e69d;
+  min-width: 70%;
+}
+
+.profile-input:read-only{
+  cursor: not-allowed;
+}
+
+.profile-input:read-write{
+  border: 2px solid #014F82;
+}
+
+  /*Keyframes for the dangling animation */
+  @keyframes dangle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+  }
+
+  .dangling-picture {
+    animation: dangle 2s ease-in-out infinite;
+  }
